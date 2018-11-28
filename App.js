@@ -1,27 +1,15 @@
 import React, {Component} from 'react';
 
 import { Navigation } from 'react-native-navigation';
+import RegisterNavigation from './src/navigations/registerNavigation';
 
 import AuthScreen from './src/screens/Auth';
 
-// import { Platform, StyleSheet, Text, View, Button } from 'react-native';
-// import PlaceList from './src/components/PlaceList';
-// import TextField from './src/components/TextField';
-// import PlaceForm from './src/components/Form/Form';
-// import PlaceDetail from './src/components/PlaceDetail';
-
-// const instructions = Platform.select({
-//   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-//   android:
-//     'Double tap R on your keyboard to reload,\n' +
-//     'Shake or press menu button for dev menu',
-// });
-
-Navigation.registerComponent('rnawesome.LoginScreen', () => AuthScreen);
+RegisterNavigation();
 
 Navigation.startSingleScreenApp({
   screen: {
-    screen: 'rnawesome.LoginScreen',
+    screen: 'LoginScreen',
     title: 'Sign In'
   }
 })

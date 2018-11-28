@@ -7,7 +7,7 @@ const PlaceList = (props) => {
   return(
     <FlatList
       data={places}
-      keyExtractor={(item,index) => item.id}
+      keyExtractor={(item,index) => item.id.toString()}
       renderItem={({item}) => (
         <TouchableOpacity onPress={() => props.onItemSelected(item.id)}>
           <View style={styles.wrapper}>

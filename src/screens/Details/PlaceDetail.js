@@ -7,17 +7,13 @@ const PlaceDetail = props => {
   const { placeDetail } = props;
 
   return(
-    <Modal
-      visible={
-        Object.keys(placeDetail).length > 0 ? true : false
-      }
-    >
+    <View>
       <View style={style.container}>
         <Image
           style={style.image}
           source={{uri: Object.keys(placeDetail).length > 0  ? placeDetail.image : null}}
         />
-        <Text>{Object.keys(placeDetail).length > 0 ? name : null}</Text>
+        <Text>{Object.keys(placeDetail).length > 0 ? placeDetail.text : null}</Text>
       </View>
       <TouchableOpacity>
         <Icon
@@ -26,9 +22,8 @@ const PlaceDetail = props => {
           color="red"
         />
       </TouchableOpacity>
-      <Button title="Delete" color="red"/>
       <Button title="Close"/>
-    </Modal>
+    </View>
   )
 }
 
