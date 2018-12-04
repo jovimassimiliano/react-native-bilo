@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, Linking, Platform } from 'react-native';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import tabBasedMenu from '../../navigations/tabBasedMenu';
-
+import FBLogin from '../../components/FBLogin';
 
 class AuthScreen extends Component {
   componentDidMount() {
@@ -61,6 +61,9 @@ class AuthScreen extends Component {
             color={GoogleSigninButton.Color.Light}
             onPress={this.signIn}
             // disabled={this.state.isSigninInProgress}
+          />
+          <FBLogin
+            style={styles.authButton}
           />
         </View>
         
