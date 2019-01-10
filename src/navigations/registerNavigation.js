@@ -6,7 +6,8 @@ import { Provider } from 'react-redux';
 import AuthScreen from '../screens/Auth';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
-import Detail from '../screens/Details/PlaceDetail';
+import PlaceDetail from '../screens/Details/PlaceDetail';
+import SideDrawer from '../components/SideDrawer';
 
 const RegisterNavigation = () => {
   Navigation.registerComponent(
@@ -32,8 +33,16 @@ const RegisterNavigation = () => {
 
   Navigation.registerComponent(
     'rnawesome.DetailScreen',
-    () => Detail
+    () => PlaceDetail,
+    store,
+    Provider
+  );
+
+  Navigation.registerComponent(
+    'rnawesome.SideDrawer',
+    () => SideDrawer
   )
 }
+
 
 export default RegisterNavigation;

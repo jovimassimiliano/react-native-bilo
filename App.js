@@ -9,8 +9,7 @@ RegisterNavigation();
 
 Navigation.startSingleScreenApp({
   screen: {
-    screen: 'LoginScreen',
-    title: 'Sign In'
+    screen: 'LoginScreen'
   }
 })
 

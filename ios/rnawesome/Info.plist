@@ -25,27 +25,31 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.googleusercontent.apps.990434239938-nhtrjicqvh8a1f21eue103jdnbmhik6k</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.990434239938-nhtrjicqvh8a1f21eue103jdnbmhik6k</string>
-				<string>rnawesome</string>
+				<string>990434239938-i2j64etfua408krcrlpokkcej1i0qq8u.apps.googleusercontent.com</string>
 			</array>
 		</dict>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLName</key>
-			<string>com.rnawesome</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.rnawesome</string>
+				<string>fb335910473659790</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>335910473659790</string>
+	<key>FacebookDisplayName</key>
+	<string>com.rnawesome</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -82,25 +86,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-		<key>CFBundleURLSchemes</key>
-		<array>
-			<string>fb335910473659790</string>
-		</array>
-		</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>335910473659790</string>
-	<key>FacebookDisplayName</key>
-	<string>com.rnawesome</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbapi</string>
-		<string>fb-messenger-share-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
-	</array>
 </dict>
 </plist>

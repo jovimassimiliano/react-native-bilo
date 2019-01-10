@@ -1,4 +1,4 @@
-import { ADD_NEWS, SELECT_NEWS } from "../types";
+import { ADD_NEWS, SELECT_NEWS, DELETE_NEWS } from "../types";
 
 const initState = {
   selectedPlace:{},
@@ -24,6 +24,11 @@ export default (state = initState, action) => {
       return({
         ...state,
         selectedPlace
+      })
+    case DELETE_NEWS: 
+    const deletedPlace = state.places.filter(place => place.id !== action.id);
+      return({
+        places: deletedPlace
       })
     default:
       return state;

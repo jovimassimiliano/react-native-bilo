@@ -52,6 +52,9 @@ class FBLogin extends Component {
       })
 
       tabBasedMenu();
+      // this.props.navigator.push({
+      //   screen: 'rnawesome.HomeScreen'
+      // });
     }
   }
 
