@@ -36,9 +36,9 @@ class Home extends Component {
       useNativeDriver: true
     }).start();
 
-    // this.setState({
-    //   placesLoaded: true
-    // })
+    this.setState({
+      placesLoaded: true
+    })
   }
 
   handleSelectedItem = id => {
@@ -57,7 +57,7 @@ class Home extends Component {
   render () {
     const { places } = this.props;
     const { placesLoaded, removeAnimation } = this.state;
-
+    
     let content = (
       <Animated.View
         style={{

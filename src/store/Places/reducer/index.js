@@ -10,8 +10,8 @@ export default (state = initState, action) => {
     case ADD_NEWS:
       const places = state.places.concat({
         id: state.places.length + 1,
-        text: action.payload,
-        image: 'https://source.unsplash.com/random/600x400'
+        text: action.payload.text,
+        image: action.payload.image.uri
       });
 
       return({

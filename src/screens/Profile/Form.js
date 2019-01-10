@@ -7,12 +7,13 @@ import { addNews } from '../../store/Places/actions';
 
 import { View, StyleSheet, Button, Text, ScrollView } from 'react-native';
 import TextField from '../../components/Form/TextField';
-import ImagePicker from '../../components/Form/ImagePicker';
 import LocationPicker from '../../components/Form/LocationPicker';
+import PickerImage from '../../components/Form/PickerImage';
 
 class NewsForm extends Component {
   state = {
-    text: ''
+    text: '',
+    image: ''
   }
 
   handleChangeText = (text) => {
@@ -21,14 +22,29 @@ class NewsForm extends Component {
     });
   }
 
+  handleChangeImage = (uri) => {
+    this.setState(prevState => ({
+        ...prevState,
+        image: uri
+      })
+    )
+  }
+
   handleSubmit = () => {
-    const { text } = this.state;
+    const { text, image } = this.state;
+
+    let submittedValue = {};
 
     if(text !== ''){
-      this.props.addNews(text)
+      submittedValue = {
+        text,
+        image
+      }
+      this.props.addNews(submittedValue);
 
       this.setState({
-        text: ''
+        text: '',
+        image: ''
       })
     }
     
@@ -41,7 +57,7 @@ class NewsForm extends Component {
       <ScrollView>
         <View style={styles.container}>
           <Text>Share a News with us!</Text>
-          <ImagePicker/>
+          <PickerImage handleImagePicker={this.handleChangeImage}/>
           <LocationPicker/>
           <TextField
             style={styles.input}

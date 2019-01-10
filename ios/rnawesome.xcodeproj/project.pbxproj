@@ -56,6 +56,7 @@
 		E7BCF45E21941D8C00753EDD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7BCF45C21941D8C00753EDD /* FontAwesome.ttf */; };
 		E7BCF45F21941D8C00753EDD /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7BCF45D21941D8C00753EDD /* Ionicons.ttf */; };
 		E7BCF46621949BF800753EDD /* libReactNativeNavigation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BCF46521949BDA00753EDD /* libReactNativeNavigation.a */; };
+		E7DB24B721E7D011009EB017 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7DB24B421E7CFF9009EB017 /* libRNImagePicker.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -374,6 +375,13 @@
 			remoteGlobalIDString = D8AFADBD1BEE6F3F00A4592D;
 			remoteInfo = ReactNativeNavigation;
 		};
+		E7DB24B321E7CFF9009EB017 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7DB248621E7CFF9009EB017 /* RNImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
+			remoteInfo = RNImagePicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -426,6 +434,7 @@
 		E7BCF4CD219951D700753EDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E7BCF4CF219951E100753EDD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		E7BCF4DD2199654300753EDD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		E7DB248621E7CFF9009EB017 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -441,6 +450,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7DB24B721E7D011009EB017 /* libRNImagePicker.a in Frameworks */,
 				E73C7A7821999BF900297C79 /* AddressBook.framework in Frameworks */,
 				E73C7A7721999BEF00297C79 /* SystemConfiguration.framework in Frameworks */,
 				E73C7A7621999BE600297C79 /* SafariServices.framework in Frameworks */,
@@ -654,6 +664,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E7DB248621E7CFF9009EB017 /* RNImagePicker.xcodeproj */,
 				E7BCF46021949BD900753EDD /* ReactNativeNavigation.xcodeproj */,
 				E7BCF429219410F200753EDD /* RNVectorIcons.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
@@ -768,6 +779,14 @@
 			isa = PBXGroup;
 			children = (
 				E7BCF46521949BDA00753EDD /* libReactNativeNavigation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E7DB248721E7CFF9009EB017 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E7DB24B421E7CFF9009EB017 /* libRNImagePicker.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -946,6 +965,10 @@
 				{
 					ProductGroup = E73C7A4921999B9D00297C79 /* Products */;
 					ProjectRef = B655725F4A1C44FEB83C55A5 /* RNGoogleSignin.xcodeproj */;
+				},
+				{
+					ProductGroup = E7DB248721E7CFF9009EB017 /* Products */;
+					ProjectRef = E7DB248621E7CFF9009EB017 /* RNImagePicker.xcodeproj */;
 				},
 				{
 					ProductGroup = E7BCF42A219410F200753EDD /* Products */;
@@ -1264,6 +1287,13 @@
 			remoteRef = E7BCF46421949BDA00753EDD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		E7DB24B421E7CFF9009EB017 /* libRNImagePicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNImagePicker.a;
+			remoteRef = E7DB24B321E7CFF9009EB017 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1415,12 +1445,7 @@
 				INFOPLIST_FILE = rnawesomeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1445,12 +1470,7 @@
 				INFOPLIST_FILE = rnawesomeTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1470,7 +1490,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/../../../ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
@@ -1499,7 +1519,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)/../../../ios",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(SRCROOT)/../node_modules/react-native-navigation/ios/**",
@@ -1540,12 +1560,7 @@
 				);
 				INFOPLIST_FILE = "rnawesome-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1578,12 +1593,7 @@
 				);
 				INFOPLIST_FILE = "rnawesome-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1615,12 +1625,7 @@
 				);
 				INFOPLIST_FILE = "rnawesome-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1652,12 +1657,7 @@
 				);
 				INFOPLIST_FILE = "rnawesome-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
