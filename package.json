@@ -14,6 +14,7 @@
     "react-native-fbsdk": "^0.8.0",
     "react-native-gesture-handler": "^1.0.12",
     "react-native-google-signin": "^1.0.0-rc8",
+    "react-native-maps": "https://github.com/react-community/react-native-maps.git#1aee143302129f3811f1753155600bd041b5214d",
     "react-native-navigation": "1.1.486",
     "react-native-vector-icons": "^6.0.2",
     "react-navigation": "^3.0.9",
